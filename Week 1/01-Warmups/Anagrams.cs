@@ -38,7 +38,7 @@ namespace Anagram
             A = A.Replace(" ", "");
             StringBuilder currentSequence = new StringBuilder();
 
-            for (int i = 0; i < B.Length - A.Length; i++)
+            for (int i = 0; i <= B.Length - A.Length; i++)
             {
                 for (int j = i; j < i + A.Length; j++)
                 {
