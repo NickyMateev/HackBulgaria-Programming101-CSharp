@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopInventoryApp", "ShopInventoryApp\ShopInventoryApp.csproj", "{6532A97E-DB6C-400A-AD9D-CCB865DCE7CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop Inventory (Library)", "Shop Inventory (Library)\Shop Inventory (Library).csproj", "{47AEC913-D857-41A7-853E-EAC3F09D952E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VAT Tax", "..\VAT TAX calculator\VAT Tax\VAT Tax.csproj", "{152B1549-AF6A-455B-A14D-3F873F69BA52}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6532A97E-DB6C-400A-AD9D-CCB865DCE7CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6532A97E-DB6C-400A-AD9D-CCB865DCE7CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6532A97E-DB6C-400A-AD9D-CCB865DCE7CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6532A97E-DB6C-400A-AD9D-CCB865DCE7CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47AEC913-D857-41A7-853E-EAC3F09D952E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47AEC913-D857-41A7-853E-EAC3F09D952E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47AEC913-D857-41A7-853E-EAC3F09D952E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47AEC913-D857-41A7-853E-EAC3F09D952E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{152B1549-AF6A-455B-A14D-3F873F69BA52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{152B1549-AF6A-455B-A14D-3F873F69BA52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{152B1549-AF6A-455B-A14D-3F873F69BA52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{152B1549-AF6A-455B-A14D-3F873F69BA52}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
