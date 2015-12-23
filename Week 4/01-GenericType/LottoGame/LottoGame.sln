@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lotto Game", "Lotto Game\Lotto Game.csproj", "{DB8E9FAF-22FD-423C-92B5-C4F6E5241B43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LottoGameApplication", "LottoGameApplication\LottoGameApplication.csproj", "{CC761D4B-CC7D-42C0-B95F-0ED7E0CF3FD3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB8E9FAF-22FD-423C-92B5-C4F6E5241B43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB8E9FAF-22FD-423C-92B5-C4F6E5241B43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB8E9FAF-22FD-423C-92B5-C4F6E5241B43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB8E9FAF-22FD-423C-92B5-C4F6E5241B43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC761D4B-CC7D-42C0-B95F-0ED7E0CF3FD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC761D4B-CC7D-42C0-B95F-0ED7E0CF3FD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC761D4B-CC7D-42C0-B95F-0ED7E0CF3FD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC761D4B-CC7D-42C0-B95F-0ED7E0CF3FD3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
