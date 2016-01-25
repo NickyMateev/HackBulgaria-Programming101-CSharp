@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notify Collection", "Notify Collection\Notify Collection.csproj", "{496FAABA-0326-4A4C-B0F1-672092E8CCBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{983315FA-9169-4D33-B1F6-ED361524DA2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentClass", "..\INotify Property Changed\StudentClass\StudentClass.csproj", "{A0DC297A-5F35-4DED-A0DC-B68F4C21E9B4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{496FAABA-0326-4A4C-B0F1-672092E8CCBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{496FAABA-0326-4A4C-B0F1-672092E8CCBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{496FAABA-0326-4A4C-B0F1-672092E8CCBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{496FAABA-0326-4A4C-B0F1-672092E8CCBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{983315FA-9169-4D33-B1F6-ED361524DA2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{983315FA-9169-4D33-B1F6-ED361524DA2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{983315FA-9169-4D33-B1F6-ED361524DA2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{983315FA-9169-4D33-B1F6-ED361524DA2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0DC297A-5F35-4DED-A0DC-B68F4C21E9B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0DC297A-5F35-4DED-A0DC-B68F4C21E9B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0DC297A-5F35-4DED-A0DC-B68F4C21E9B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0DC297A-5F35-4DED-A0DC-B68F4C21E9B4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
