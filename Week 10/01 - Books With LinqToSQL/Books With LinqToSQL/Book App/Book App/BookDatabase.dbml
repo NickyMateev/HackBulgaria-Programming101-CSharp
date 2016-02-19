@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BookDatabase" Class="BookDatabaseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=NICKY-PC\SQLEXPRESS;Initial Catalog=BookDatabase;Integrated Security=True" SettingsObjectName="Book_App.Properties.Settings" SettingsPropertyName="BookDatabaseConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Authors" Member="Authors">
+    <Type Name="Author">
+      <Column Name="AuthorID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[First Name]" Member="First_Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="[Last Name]" Member="Last_Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="[Year Born]" Member="Year_Born" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Year Died]" Member="Year_Died" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Author_BookAuthor" Member="BookAuthors" ThisKey="AuthorID" OtherKey="AuthorID" Type="BookAuthor" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BookAuthor" Member="BookAuthors">
+    <Type Name="BookAuthor">
+      <Column Name="BookID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AuthorID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Author_BookAuthor" Member="Author" ThisKey="AuthorID" OtherKey="AuthorID" Type="Author" IsForeignKey="true" />
+      <Association Name="Book_BookAuthor" Member="Book" ThisKey="BookID" OtherKey="BookID" Type="Book" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Books" Member="Books">
+    <Type Name="Book">
+      <Column Name="BookID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="[Date Published]" Member="Date_Published" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Publisher" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Genre" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Pages" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ISBN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Number of copies]" Member="Number_of_copies" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Book_BookAuthor" Member="BookAuthors" ThisKey="BookID" OtherKey="BookID" Type="BookAuthor" />
+      <Association Name="Book_UserBook" Member="UserBooks" ThisKey="BookID" OtherKey="BookID" Type="UserBook" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserBook" Member="UserBooks">
+    <Type Name="UserBook">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BookID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Copy #]" Member="Copy__" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Date given]" Member="Date_given" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="[Date to return]" Member="Date_to_return" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="Book_UserBook" Member="Book" ThisKey="BookID" OtherKey="BookID" Type="Book" IsForeignKey="true" />
+      <Association Name="User_UserBook" Member="User" ThisKey="UserID" OtherKey="UserID" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Users" Member="Users">
+    <Type Name="User">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[First Name]" Member="First_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[Last Name]" Member="Last_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Pseudonim" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Books lent]" Member="Books_lent" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="User_UserBook" Member="UserBooks" ThisKey="UserID" OtherKey="UserID" Type="UserBook" />
+    </Type>
+  </Table>
+  <Function Name="dbo.AddBookAuthorRecord" Method="AddBookAuthorRecord">
+    <Parameter Name="bookID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="authorID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddUserBookRecord" Method="AddUserBookRecord">
+    <Parameter Name="bookID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="userID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="copy" Type="System.Int32" DbType="Int" />
+    <Parameter Name="dateGiven" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="dateReturn" Type="System.DateTime" DbType="Date" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RemoveUserBookRecord" Method="RemoveUserBookRecord">
+    <Parameter Name="userID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="bookID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>
