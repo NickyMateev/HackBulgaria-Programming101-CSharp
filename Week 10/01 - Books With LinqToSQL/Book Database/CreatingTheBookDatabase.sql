@@ -51,6 +51,3 @@ CREATE TABLE UserBook
 	FOREIGN KEY (UserID) REFERENCES Users(UserID),
 	FOREIGN KEY (BookID) REFERENCES Books(BookID)
 )
-
-select *
-from Books
